@@ -154,7 +154,7 @@ LaneBlocker::LaneBlocker(const rclcpp::NodeOptions& options)
   _max_search_duration = std::chrono::milliseconds(search_millis);
 
   _continuous_checker =
-    this->declare_parameter("continuous_checker", true);
+    this->declare_parameter("continuous_checker", false);
   RCLCPP_INFO(
     this->get_logger(),
     "Setting parameter continuous_checker to %s",
